@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#101014">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mic FX Booster"
+        android:textColor="#FFFFFF"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Stopped. Pick a mic character, then tap the power button."
+        android:textColor="#AAAAAA"
+        android:textSize="14sp"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- Each mic is its own row: icon, name + perk line, and a real toggle switch.
+         Tapping the row or flipping the switch both toggle it (your choice). -->
+    <LinearLayout android:id="@+id/rowSilver" style="@style/MicRow">
+        <ImageView android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/ic_mic_silver"/>
+        <LinearLayout style="@style/MicRowText">
+            <TextView android:id="@+id/tvSilverName" style="@style/MicRowName" android:text="Silver"/>
+            <TextView style="@style/MicRowPerk" android:text="Crystal Air — bright &amp; cutting"/>
+        </LinearLayout>
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/swSilver" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/rowVintage" style="@style/MicRow">
+        <ImageView android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/ic_mic_vintage"/>
+        <LinearLayout style="@style/MicRowText">
+            <TextView android:id="@+id/tvVintageName" style="@style/MicRowName" android:text="Vintage Dynamic"/>
+            <TextView style="@style/MicRowPerk" android:text="Extreme bass &amp; fizz"/>
+        </LinearLayout>
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/swVintage" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/rowGolden" style="@style/MicRow">
+        <ImageView android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/ic_mic_golden"/>
+        <LinearLayout style="@style/MicRowText">
+            <TextView android:id="@+id/tvGoldenName" style="@style/MicRowName" android:text="Golden"/>
+            <TextView style="@style/MicRowPerk" android:text="Studio Polish — clean broadcast"/>
+        </LinearLayout>
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/swGolden" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/rowEcho" style="@style/MicRow">
+        <ImageView android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/ic_mic_echo"/>
+        <LinearLayout style="@style/MicRowText">
+            <TextView android:id="@+id/tvEchoName" style="@style/MicRowName" android:text="Echo"/>
+            <TextView style="@style/MicRowPerk" android:text="Big Room — spatial delay"/>
+        </LinearLayout>
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/swEcho" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/rowBeast" style="@style/MicRow">
+        <ImageView android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/ic_mic_beast"/>
+        <LinearLayout style="@style/MicRowText">
+            <TextView android:id="@+id/tvBeastName" style="@style/MicRowName" android:text="Beast Mode"/>
+            <TextView style="@style/MicRowPerk" android:text="Max clean loudness"/>
+        </LinearLayout>
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/swBeast" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/rowAlpha" style="@style/MicRow">
+        <ImageView android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/ic_mic_alpha"/>
+        <LinearLayout style="@style/MicRowText">
+            <TextView android:id="@+id/tvAlphaName" style="@style/MicRowName" android:text="Alpha"/>
+            <TextView style="@style/MicRowPerk" android:text="Max loud + roar"/>
+        </LinearLayout>
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/swAlpha" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnMasterPower"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_marginTop="16dp"
+        android:text="POWER ON"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:backgroundTint="#E63946"
+        android:textColor="#FFFFFF"/>
+
+</LinearLayout>
+</ScrollView>
